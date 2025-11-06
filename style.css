@@ -188,7 +188,7 @@ nav ul {
 }
 
 
-/* Credit: Gallery by Olivia NG */
+/* Parcial credit: Gallery by Olivia NG */
 nav ul > li > a,
 aside > a {
   background: #FAF3E0;
@@ -400,6 +400,21 @@ a.link-guidelines {
   border-radius: 2px;
 }
 
+@media screen and (max-width: 710px) {
+  #about section.container:nth-of-type(2) ul {
+    display: grid; 
+    grid-template-columns: 1fr;
+    list-style: disc;
+    background-color: #FAF3E0;
+    transform: rotate(-3deg); 
+    width: 100%;
+    padding: 2rem; 
+    margin: 4rem auto; 
+    box-shadow: 0 5px 10px #84755E;
+    border-radius: 2px;
+  }
+}
+
 #about section.container:nth-of-type(2) ul li {
   font-family: 'Special Elite', monospace;
   color: #1C1C1C;
@@ -524,6 +539,7 @@ a.link-guidelines {
   }
 }
 
+
 aside.profile div.container ul,
 aside.profile div.container ul li {
   font-family: 'Montserrat', sans-serif;
@@ -556,6 +572,57 @@ a.link-allstyles {
   justify-content: center;
 }
 
+@media screen and (max-width: 1035px) {
+  #main > .container > article#contribute > footer#files > div.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: auto auto 3rem auto; 
+    width: fit-content;
+  }
+
+  #main > .container > article#contribute > footer#files > div.container a {
+    font-family: 'Montserrat', sans-serif; 
+    color: #FAF3E0; 
+    font-weight: 200; 
+    line-height: 2;
+    margin: 0 auto;
+    text-shadow: 2px 2px 5px #1C1C1C;
+  } 
+
+  aside.profile div.container {
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-areas:
+      "h4"
+      "ul"
+      "a";
+    gap: auto;
+    line-height: 1;
+  }
+
+  aside.profile div.container h4 {
+    grid-area: h4;
+    text-align: center;
+  }
+
+  aside.profile div.container ul {
+    grid-area: ul;
+    display: flex;
+    flex-direction: column; 
+    text-align: center;
+    padding-top: 2em;
+    margin: 0;
+  }
+
+  aside.profile div.container a {
+    grid-area: a;
+    text-align: center;
+    padding-top: 0;
+    margin: 0;
+  }
+}
 
 aside.profile div.container a:last-of-type:hover, 
 a.link-allstyles:hover {
